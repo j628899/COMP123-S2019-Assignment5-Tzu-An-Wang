@@ -1,4 +1,6 @@
-﻿using System;
+﻿using COMP123_S2019_Assignment5_Tzu_An_Wang.Models;
+using COMP123_S2019_Assignment5_Tzu_An_Wang.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,8 +8,18 @@ using System.Windows.Forms;
 
 namespace COMP123_S2019_Assignment5_Tzu_An_Wang
 {
-    static class Program
+    public static class Program
     {
+        public static SelectForm selectForm;
+        public static StartForm startForm;
+        public static SplashForm splashForm;
+        public static OrderForms orderForm;
+        public static ProductinfoForm productinfoForm;
+        public static AboutForm aboutForm;
+        public static Splash_Screen splash_Screen;
+
+        public static Product product;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +28,17 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            splashForm = new SplashForm();
+            startForm = new StartForm();
+            selectForm = new SelectForm();
+            orderForm = new OrderForms();
+            productinfoForm = new ProductinfoForm();
+            aboutForm = new AboutForm();
+            splash_Screen = new Splash_Screen();
+            product = new Product();
+
+            Application.Run(splash_Screen);
         }
     }
 }
