@@ -17,8 +17,9 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang
         public static ProductinfoForm productinfoForm;
         public static AboutForm aboutForm;
         public static Splash_Screen splash_Screen;
-
         public static Product product;
+        public static ProductClass productClass;
+
 
         /// <summary>
         /// The main entry point for the application.
@@ -37,7 +38,7 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang
             aboutForm = new AboutForm();
             splash_Screen = new Splash_Screen();
             product = new Product();
-
+            productClass = new ProductClass();
             Application.Run(splash_Screen);
         }
     }

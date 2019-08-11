@@ -33,7 +33,7 @@
             this.CancelButton = new System.Windows.Forms.Button();
             this.DollarComputerText = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
-            this.MultilineTextBox = new System.Windows.Forms.TextBox();
+            this.SelectionTextBox = new System.Windows.Forms.TextBox();
             this.SelectionLabel = new System.Windows.Forms.Label();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,6 +121,7 @@
             this.ProductDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProductDataGridView.Size = new System.Drawing.Size(1156, 446);
             this.ProductDataGridView.TabIndex = 0;
+            this.ProductDataGridView.SelectionChanged += new System.EventHandler(this.ProductDataGridView_SelectionChanged);
             // 
             // CancelButton
             // 
@@ -152,16 +153,16 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // MultilineTextBox
+            // SelectionTextBox
             // 
-            this.MultilineTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.MultilineTextBox.Enabled = false;
-            this.MultilineTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MultilineTextBox.ForeColor = System.Drawing.SystemColors.Control;
-            this.MultilineTextBox.Location = new System.Drawing.Point(256, 536);
-            this.MultilineTextBox.Name = "MultilineTextBox";
-            this.MultilineTextBox.Size = new System.Drawing.Size(559, 36);
-            this.MultilineTextBox.TabIndex = 8;
+            this.SelectionTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.SelectionTextBox.Enabled = false;
+            this.SelectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectionTextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.SelectionTextBox.Location = new System.Drawing.Point(256, 536);
+            this.SelectionTextBox.Name = "SelectionTextBox";
+            this.SelectionTextBox.Size = new System.Drawing.Size(559, 36);
+            this.SelectionTextBox.TabIndex = 8;
             // 
             // SelectionLabel
             // 
@@ -424,7 +425,7 @@
             this.ClientSize = new System.Drawing.Size(1182, 593);
             this.ControlBox = false;
             this.Controls.Add(this.SelectionLabel);
-            this.Controls.Add(this.MultilineTextBox);
+            this.Controls.Add(this.SelectionTextBox);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.DollarComputerText);
             this.Controls.Add(this.CancelButton);
@@ -481,7 +482,7 @@
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label DollarComputerText;
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.TextBox MultilineTextBox;
+        private System.Windows.Forms.TextBox SelectionTextBox;
         private System.Windows.Forms.Label SelectionLabel;
     }
 }
