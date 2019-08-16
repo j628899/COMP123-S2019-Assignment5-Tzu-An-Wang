@@ -77,7 +77,11 @@
             this.CostTextBox = new System.Windows.Forms.TextBox();
             this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.OrderFormMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderFormMenuStrip
@@ -108,14 +112,14 @@
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -131,13 +135,13 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(163, 6);
             // 
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.backToolStripMenuItem.Text = "Back";
             // 
             // helpToolStripMenuItem
@@ -151,7 +155,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // ProductPrintForm
@@ -433,7 +437,7 @@
             // PriceLabel
             // 
             this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Location = new System.Drawing.Point(753, 304);
+            this.PriceLabel.Location = new System.Drawing.Point(754, 360);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(67, 25);
             this.PriceLabel.TabIndex = 9;
@@ -442,7 +446,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(649, 338);
+            this.label2.Location = new System.Drawing.Point(650, 394);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 25);
             this.label2.TabIndex = 9;
@@ -451,7 +455,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(743, 416);
+            this.label3.Location = new System.Drawing.Point(754, 472);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 25);
             this.label3.TabIndex = 9;
@@ -460,26 +464,59 @@
             // CostTextBox
             // 
             this.CostTextBox.Enabled = false;
-            this.CostTextBox.Location = new System.Drawing.Point(826, 301);
+            this.CostTextBox.Location = new System.Drawing.Point(827, 357);
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.Size = new System.Drawing.Size(168, 30);
             this.CostTextBox.TabIndex = 10;
+            this.CostTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SalesTaxTextBox
             // 
             this.SalesTaxTextBox.Enabled = false;
-            this.SalesTaxTextBox.Location = new System.Drawing.Point(826, 340);
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(827, 396);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
             this.SalesTaxTextBox.Size = new System.Drawing.Size(168, 30);
             this.SalesTaxTextBox.TabIndex = 10;
+            this.SalesTaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TotalTextBox
             // 
             this.TotalTextBox.Enabled = false;
-            this.TotalTextBox.Location = new System.Drawing.Point(826, 413);
+            this.TotalTextBox.Location = new System.Drawing.Point(837, 469);
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.Size = new System.Drawing.Size(168, 30);
             this.TotalTextBox.TabIndex = 10;
+            this.TotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(716, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(303, 247);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(1082, 593);
+            this.shapeContainer1.TabIndex = 12;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderWidth = 3;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 671;
+            this.lineShape1.X2 = 1018;
+            this.lineShape1.Y1 = 452;
+            this.lineShape1.Y2 = 452;
             // 
             // OrderForms
             // 
@@ -487,6 +524,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 593);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TotalTextBox);
             this.Controls.Add(this.SalesTaxTextBox);
             this.Controls.Add(this.CostTextBox);
@@ -525,6 +563,7 @@
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OrderFormMenuStrip);
+            this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.OrderFormMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -533,6 +572,7 @@
             this.Activated += new System.EventHandler(this.OrderForms_Activated);
             this.OrderFormMenuStrip.ResumeLayout(false);
             this.OrderFormMenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,5 +627,8 @@
         private System.Windows.Forms.TextBox CostTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
     }
 }

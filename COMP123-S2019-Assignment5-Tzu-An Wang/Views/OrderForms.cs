@@ -76,7 +76,7 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang.Views
 
             ManufactursTextBox.Text = Program.productClass.ProductId.ToString();
             ConditionTextBox.Text = Program.productClass.Condition;
-            CostTextBox.Text = Program.productClass.Cost.ToString();
+            CostTextBox.Text = "$"+Program.productClass.Cost.ToString();
             PlatformTextBox.Text = Program.productClass.Platform;
             OSTextBox.Text = Program.productClass.OS;
             ManufactursTextBox.Text = Program.productClass.Manufactur;
@@ -91,8 +91,8 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang.Views
             GPUTypeTextBox.Text = Program.productClass.GPUType;
             WebCamTextBox.Text = Program.productClass.WebCam;
 
-            SalesTaxTextBox.Text = (Program.productClass.Cost * 0.13).ToString();
-            TotalTextBox.Text = (Program.productClass.Cost * 1.13).ToString();
+            SalesTaxTextBox.Text = ("$"+Program.productClass.Cost * 0.13).ToString();
+            TotalTextBox.Text = ("$"+Program.productClass.Cost * 1.13).ToString();
         }
 
         private void NextButton_Click(object sender, EventArgs e)

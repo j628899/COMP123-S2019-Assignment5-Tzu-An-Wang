@@ -56,7 +56,7 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang.Views
         {
             if (ProductDataGridView.CurrentCell != null)
             { 
-                var currentCell = ProductDataGridView.CurrentCell;
+            var currentCell = ProductDataGridView.CurrentCell;
             var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
             var currentRow = ProductDataGridView.Rows[rowIndex];
             var columnCount = ProductDataGridView.ColumnCount;
@@ -84,12 +84,12 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang.Views
                 Program.productClass.Resolution = cells[7].Value.ToString();
                 Program.productClass.CPUClass = cells[8].Value.ToString();
                 Program.productClass.CPUBrand = cells[9].Value.ToString();
-                Program.productClass.CPUType  = cells[10].Value.ToString();
+                Program.productClass.CPUType = cells[10].Value.ToString();
                 Program.productClass.CPUspeed = cells[11].Value.ToString();
                 Program.productClass.CPUNumber = cells[12].Value.ToString();
                 Program.productClass.Condition = cells[13].Value.ToString();
                 Program.productClass.OS = cells[14].Value.ToString();
-                Program.productClass.Platform  = cells[15].Value.ToString();
+                Program.productClass.Platform = cells[15].Value.ToString();
                 Program.productClass.HDDSize = cells[16].Value.ToString();
                 Program.productClass.HDDSpeed = cells[17].Value.ToString();
                 Program.productClass.GPUType = cells[18].Value.ToString();
@@ -103,8 +103,8 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang.Views
                 Program.productClass.Weight = cells[26].Value.ToString();
                 Program.productClass.MoustType = cells[27].Value.ToString();
                 Program.productClass.Power = cells[28].Value.ToString();
-                Program.productClass.WebCam  = cells[29].Value.ToString();
-                
+                Program.productClass.WebCam = cells[29].Value.ToString();
+
 
             }
 

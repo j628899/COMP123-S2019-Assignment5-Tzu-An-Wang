@@ -149,5 +149,11 @@
   <ItemGroup>
     <Folder Include="Controller\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Photo\5e7222b0de75e2553907bb700bd239d8_0_0_original.jpg" />
+    <Content Include="Photo\computer basics %28300 dpi%29_0.jpg" />
+    <Content Include="Photo\images.jpg" />
+    <Content Include="Photo\What-is-Computer.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

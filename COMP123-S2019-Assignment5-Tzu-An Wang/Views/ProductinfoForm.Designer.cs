@@ -73,6 +73,7 @@
             this.WebCamLabel = new System.Windows.Forms.Label();
             this.WebCamTextBox = new System.Windows.Forms.TextBox();
             this.ClickLabel = new System.Windows.Forms.Label();
+            this.ProductinfoLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,13 +107,13 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(170, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -120,14 +121,14 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -456,12 +457,23 @@
             this.ClickLabel.TabIndex = 9;
             this.ClickLabel.Text = "Click Next to Confirm Your Selection";
             // 
+            // ProductinfoLabel
+            // 
+            this.ProductinfoLabel.AutoSize = true;
+            this.ProductinfoLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductinfoLabel.Location = new System.Drawing.Point(37, 123);
+            this.ProductinfoLabel.Name = "ProductinfoLabel";
+            this.ProductinfoLabel.Size = new System.Drawing.Size(120, 25);
+            this.ProductinfoLabel.TabIndex = 10;
+            this.ProductinfoLabel.Text = "Product info";
+            // 
             // ProductinfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 593);
             this.ControlBox = false;
+            this.Controls.Add(this.ProductinfoLabel);
             this.Controls.Add(this.ClickLabel);
             this.Controls.Add(this.CostTextBox);
             this.Controls.Add(this.ConditionTextBox);
@@ -560,5 +572,6 @@
         private System.Windows.Forms.Label WebCamLabel;
         private System.Windows.Forms.TextBox WebCamTextBox;
         private System.Windows.Forms.Label ClickLabel;
+        private System.Windows.Forms.Label ProductinfoLabel;
     }
 }
