@@ -125,5 +125,16 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang.Views
                      MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void selectAnotherProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.selectForm.Show();
+            this.Hide();
+        }
     }
 }

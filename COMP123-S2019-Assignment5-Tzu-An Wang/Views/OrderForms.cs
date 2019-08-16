@@ -100,5 +100,17 @@ namespace COMP123_S2019_Assignment5_Tzu_An_Wang.Views
             MessageBox.Show("Order Complete ");
             Application.Exit();
         }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.productinfoForm.Show();
+            this.Hide();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -80,8 +80,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.ProductinfoLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.OrderFormMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // OrderFormMenuStrip
@@ -112,7 +125,7 @@
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
@@ -141,8 +154,9 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -155,8 +169,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // ProductPrintForm
             // 
@@ -198,8 +213,9 @@
             // 
             // ManufactursTextBox
             // 
+            this.ManufactursTextBox.BackColor = System.Drawing.Color.White;
             this.ManufactursTextBox.Enabled = false;
-            this.ManufactursTextBox.Location = new System.Drawing.Point(168, 127);
+            this.ManufactursTextBox.Location = new System.Drawing.Point(168, 156);
             this.ManufactursTextBox.Name = "ManufactursTextBox";
             this.ManufactursTextBox.Size = new System.Drawing.Size(168, 30);
             this.ManufactursTextBox.TabIndex = 10;
@@ -207,7 +223,7 @@
             // ManufacturerLabel
             // 
             this.ManufacturerLabel.AutoSize = true;
-            this.ManufacturerLabel.Location = new System.Drawing.Point(16, 127);
+            this.ManufacturerLabel.Location = new System.Drawing.Point(16, 156);
             this.ManufacturerLabel.Name = "ManufacturerLabel";
             this.ManufacturerLabel.Size = new System.Drawing.Size(138, 25);
             this.ManufacturerLabel.TabIndex = 9;
@@ -216,7 +232,7 @@
             // ConditionLabel
             // 
             this.ConditionLabel.AutoSize = true;
-            this.ConditionLabel.Location = new System.Drawing.Point(48, 75);
+            this.ConditionLabel.Location = new System.Drawing.Point(48, 110);
             this.ConditionLabel.Name = "ConditionLabel";
             this.ConditionLabel.Size = new System.Drawing.Size(106, 25);
             this.ConditionLabel.TabIndex = 9;
@@ -224,8 +240,9 @@
             // 
             // ConditionTextBox
             // 
+            this.ConditionTextBox.BackColor = System.Drawing.Color.White;
             this.ConditionTextBox.Enabled = false;
-            this.ConditionTextBox.Location = new System.Drawing.Point(168, 75);
+            this.ConditionTextBox.Location = new System.Drawing.Point(168, 110);
             this.ConditionTextBox.Name = "ConditionTextBox";
             this.ConditionTextBox.Size = new System.Drawing.Size(168, 30);
             this.ConditionTextBox.TabIndex = 10;
@@ -233,7 +250,7 @@
             // ModelLabel
             // 
             this.ModelLabel.AutoSize = true;
-            this.ModelLabel.Location = new System.Drawing.Point(368, 130);
+            this.ModelLabel.Location = new System.Drawing.Point(368, 159);
             this.ModelLabel.Name = "ModelLabel";
             this.ModelLabel.Size = new System.Drawing.Size(77, 25);
             this.ModelLabel.TabIndex = 9;
@@ -242,7 +259,7 @@
             // PlatformLabel
             // 
             this.PlatformLabel.AutoSize = true;
-            this.PlatformLabel.Location = new System.Drawing.Point(351, 78);
+            this.PlatformLabel.Location = new System.Drawing.Point(351, 113);
             this.PlatformLabel.Name = "PlatformLabel";
             this.PlatformLabel.Size = new System.Drawing.Size(94, 25);
             this.PlatformLabel.TabIndex = 9;
@@ -250,186 +267,228 @@
             // 
             // ModelTextBox
             // 
+            this.ModelTextBox.BackColor = System.Drawing.Color.White;
             this.ModelTextBox.Enabled = false;
-            this.ModelTextBox.Location = new System.Drawing.Point(459, 127);
+            this.ModelTextBox.Location = new System.Drawing.Point(459, 156);
             this.ModelTextBox.Name = "ModelTextBox";
             this.ModelTextBox.Size = new System.Drawing.Size(168, 30);
             this.ModelTextBox.TabIndex = 10;
             // 
             // PlatformTextBox
             // 
+            this.PlatformTextBox.BackColor = System.Drawing.Color.White;
             this.PlatformTextBox.Enabled = false;
-            this.PlatformTextBox.Location = new System.Drawing.Point(459, 75);
+            this.PlatformTextBox.Location = new System.Drawing.Point(459, 110);
             this.PlatformTextBox.Name = "PlatformTextBox";
             this.PlatformTextBox.Size = new System.Drawing.Size(168, 30);
             this.PlatformTextBox.TabIndex = 10;
             // 
             // LCDSizeLabel
             // 
+            this.LCDSizeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LCDSizeLabel.AutoSize = true;
-            this.LCDSizeLabel.Location = new System.Drawing.Point(59, 186);
+            this.LCDSizeLabel.Location = new System.Drawing.Point(3, 0);
             this.LCDSizeLabel.Name = "LCDSizeLabel";
-            this.LCDSizeLabel.Size = new System.Drawing.Size(103, 25);
+            this.LCDSizeLabel.Size = new System.Drawing.Size(134, 34);
             this.LCDSizeLabel.TabIndex = 9;
             this.LCDSizeLabel.Text = "LCD size :";
             // 
             // LCDSizeTextBox
             // 
+            this.LCDSizeTextBox.BackColor = System.Drawing.Color.White;
             this.LCDSizeTextBox.Enabled = false;
-            this.LCDSizeTextBox.Location = new System.Drawing.Point(168, 183);
+            this.LCDSizeTextBox.Location = new System.Drawing.Point(143, 3);
             this.LCDSizeTextBox.Name = "LCDSizeTextBox";
             this.LCDSizeTextBox.Size = new System.Drawing.Size(459, 30);
             this.LCDSizeTextBox.TabIndex = 10;
             // 
             // MemoryLabel
             // 
+            this.MemoryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MemoryLabel.AutoSize = true;
-            this.MemoryLabel.Location = new System.Drawing.Point(68, 211);
+            this.MemoryLabel.Location = new System.Drawing.Point(3, 34);
             this.MemoryLabel.Name = "MemoryLabel";
-            this.MemoryLabel.Size = new System.Drawing.Size(94, 25);
+            this.MemoryLabel.Size = new System.Drawing.Size(134, 34);
             this.MemoryLabel.TabIndex = 9;
             this.MemoryLabel.Text = "Memory :";
             // 
             // MemoryTextBox
             // 
+            this.MemoryTextBox.BackColor = System.Drawing.Color.White;
             this.MemoryTextBox.Enabled = false;
-            this.MemoryTextBox.Location = new System.Drawing.Point(168, 208);
+            this.MemoryTextBox.Location = new System.Drawing.Point(143, 37);
             this.MemoryTextBox.Name = "MemoryTextBox";
             this.MemoryTextBox.Size = new System.Drawing.Size(459, 30);
             this.MemoryTextBox.TabIndex = 10;
             // 
             // GBUBrandLabel
             // 
+            this.GBUBrandLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GBUBrandLabel.AutoSize = true;
-            this.GBUBrandLabel.Location = new System.Drawing.Point(40, 236);
+            this.GBUBrandLabel.Location = new System.Drawing.Point(3, 68);
             this.GBUBrandLabel.Name = "GBUBrandLabel";
-            this.GBUBrandLabel.Size = new System.Drawing.Size(122, 25);
+            this.GBUBrandLabel.Size = new System.Drawing.Size(134, 34);
             this.GBUBrandLabel.TabIndex = 9;
             this.GBUBrandLabel.Text = "GBU Brand :";
             // 
             // CPUBrandTextBox
             // 
+            this.CPUBrandTextBox.BackColor = System.Drawing.Color.White;
             this.CPUBrandTextBox.Enabled = false;
-            this.CPUBrandTextBox.Location = new System.Drawing.Point(168, 233);
+            this.CPUBrandTextBox.Location = new System.Drawing.Point(143, 71);
             this.CPUBrandTextBox.Name = "CPUBrandTextBox";
             this.CPUBrandTextBox.Size = new System.Drawing.Size(459, 30);
             this.CPUBrandTextBox.TabIndex = 10;
             // 
             // CPUTypeLabel
             // 
+            this.CPUTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CPUTypeLabel.AutoSize = true;
-            this.CPUTypeLabel.Location = new System.Drawing.Point(48, 263);
+            this.CPUTypeLabel.Location = new System.Drawing.Point(3, 102);
             this.CPUTypeLabel.Name = "CPUTypeLabel";
-            this.CPUTypeLabel.Size = new System.Drawing.Size(115, 25);
+            this.CPUTypeLabel.Size = new System.Drawing.Size(134, 34);
             this.CPUTypeLabel.TabIndex = 9;
             this.CPUTypeLabel.Text = "CPU Type :";
             // 
             // CPUTypeTextBox
             // 
+            this.CPUTypeTextBox.BackColor = System.Drawing.Color.White;
             this.CPUTypeTextBox.Enabled = false;
-            this.CPUTypeTextBox.Location = new System.Drawing.Point(168, 260);
+            this.CPUTypeTextBox.Location = new System.Drawing.Point(143, 105);
             this.CPUTypeTextBox.Name = "CPUTypeTextBox";
             this.CPUTypeTextBox.Size = new System.Drawing.Size(459, 30);
             this.CPUTypeTextBox.TabIndex = 10;
             // 
             // CPUnumberLabel
             // 
+            this.CPUnumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CPUnumberLabel.AutoSize = true;
-            this.CPUnumberLabel.Location = new System.Drawing.Point(27, 288);
+            this.CPUnumberLabel.Location = new System.Drawing.Point(3, 136);
             this.CPUnumberLabel.Name = "CPUnumberLabel";
-            this.CPUnumberLabel.Size = new System.Drawing.Size(136, 25);
+            this.CPUnumberLabel.Size = new System.Drawing.Size(134, 34);
             this.CPUnumberLabel.TabIndex = 9;
             this.CPUnumberLabel.Text = "CPU number :";
             // 
             // CPUNumberTextBox
             // 
+            this.CPUNumberTextBox.BackColor = System.Drawing.Color.White;
             this.CPUNumberTextBox.Enabled = false;
-            this.CPUNumberTextBox.Location = new System.Drawing.Point(168, 285);
+            this.CPUNumberTextBox.Location = new System.Drawing.Point(143, 139);
             this.CPUNumberTextBox.Name = "CPUNumberTextBox";
             this.CPUNumberTextBox.Size = new System.Drawing.Size(459, 30);
             this.CPUNumberTextBox.TabIndex = 10;
             // 
             // CPUspeedLabel
             // 
+            this.CPUspeedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CPUspeedLabel.AutoSize = true;
-            this.CPUspeedLabel.Location = new System.Drawing.Point(38, 313);
+            this.CPUspeedLabel.Location = new System.Drawing.Point(3, 170);
             this.CPUspeedLabel.Name = "CPUspeedLabel";
-            this.CPUspeedLabel.Size = new System.Drawing.Size(124, 25);
+            this.CPUspeedLabel.Size = new System.Drawing.Size(134, 34);
             this.CPUspeedLabel.TabIndex = 9;
             this.CPUspeedLabel.Text = "CPU speed :";
             // 
             // CPUSeedTextBox
             // 
+            this.CPUSeedTextBox.BackColor = System.Drawing.Color.White;
             this.CPUSeedTextBox.Enabled = false;
-            this.CPUSeedTextBox.Location = new System.Drawing.Point(168, 310);
+            this.CPUSeedTextBox.Location = new System.Drawing.Point(143, 173);
             this.CPUSeedTextBox.Name = "CPUSeedTextBox";
             this.CPUSeedTextBox.Size = new System.Drawing.Size(459, 30);
             this.CPUSeedTextBox.TabIndex = 10;
             // 
             // HDDLabel
             // 
+            this.HDDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.HDDLabel.AutoSize = true;
-            this.HDDLabel.Location = new System.Drawing.Point(97, 338);
+            this.HDDLabel.Location = new System.Drawing.Point(3, 204);
             this.HDDLabel.Name = "HDDLabel";
-            this.HDDLabel.Size = new System.Drawing.Size(65, 25);
+            this.HDDLabel.Size = new System.Drawing.Size(134, 34);
             this.HDDLabel.TabIndex = 9;
             this.HDDLabel.Text = "HDD :";
             // 
             // HDDTextBox
             // 
+            this.HDDTextBox.BackColor = System.Drawing.Color.White;
             this.HDDTextBox.Enabled = false;
-            this.HDDTextBox.Location = new System.Drawing.Point(168, 335);
+            this.HDDTextBox.Location = new System.Drawing.Point(143, 207);
             this.HDDTextBox.Name = "HDDTextBox";
             this.HDDTextBox.Size = new System.Drawing.Size(459, 30);
             this.HDDTextBox.TabIndex = 10;
             // 
             // GPUTypeLabel
             // 
+            this.GPUTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GPUTypeLabel.AutoSize = true;
-            this.GPUTypeLabel.Location = new System.Drawing.Point(47, 363);
+            this.GPUTypeLabel.Location = new System.Drawing.Point(3, 238);
             this.GPUTypeLabel.Name = "GPUTypeLabel";
-            this.GPUTypeLabel.Size = new System.Drawing.Size(115, 25);
+            this.GPUTypeLabel.Size = new System.Drawing.Size(134, 34);
             this.GPUTypeLabel.TabIndex = 9;
             this.GPUTypeLabel.Text = "GPU Type :";
             // 
             // GPUTypeTextBox
             // 
+            this.GPUTypeTextBox.BackColor = System.Drawing.Color.White;
             this.GPUTypeTextBox.Enabled = false;
-            this.GPUTypeTextBox.Location = new System.Drawing.Point(168, 360);
+            this.GPUTypeTextBox.Location = new System.Drawing.Point(143, 241);
             this.GPUTypeTextBox.Name = "GPUTypeTextBox";
             this.GPUTypeTextBox.Size = new System.Drawing.Size(459, 30);
             this.GPUTypeTextBox.TabIndex = 10;
             // 
             // WebCamLabel
             // 
+            this.WebCamLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.WebCamLabel.AutoSize = true;
-            this.WebCamLabel.Location = new System.Drawing.Point(55, 390);
+            this.WebCamLabel.Location = new System.Drawing.Point(3, 272);
             this.WebCamLabel.Name = "WebCamLabel";
-            this.WebCamLabel.Size = new System.Drawing.Size(107, 25);
+            this.WebCamLabel.Size = new System.Drawing.Size(134, 34);
             this.WebCamLabel.TabIndex = 9;
             this.WebCamLabel.Text = "WebCam :";
             // 
             // WebCamTextBox
             // 
+            this.WebCamTextBox.BackColor = System.Drawing.Color.White;
             this.WebCamTextBox.Enabled = false;
-            this.WebCamTextBox.Location = new System.Drawing.Point(168, 385);
+            this.WebCamTextBox.Location = new System.Drawing.Point(143, 275);
             this.WebCamTextBox.Name = "WebCamTextBox";
             this.WebCamTextBox.Size = new System.Drawing.Size(459, 30);
             this.WebCamTextBox.TabIndex = 10;
             // 
             // OSLabel
             // 
+            this.OSLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OSLabel.AutoSize = true;
-            this.OSLabel.Location = new System.Drawing.Point(109, 413);
+            this.OSLabel.Location = new System.Drawing.Point(3, 306);
             this.OSLabel.Name = "OSLabel";
-            this.OSLabel.Size = new System.Drawing.Size(53, 25);
+            this.OSLabel.Size = new System.Drawing.Size(134, 36);
             this.OSLabel.TabIndex = 9;
             this.OSLabel.Text = "OS :";
             // 
             // OSTextBox
             // 
+            this.OSTextBox.BackColor = System.Drawing.Color.White;
             this.OSTextBox.Enabled = false;
-            this.OSTextBox.Location = new System.Drawing.Point(168, 410);
+            this.OSTextBox.Location = new System.Drawing.Point(143, 309);
             this.OSTextBox.Name = "OSTextBox";
             this.OSTextBox.Size = new System.Drawing.Size(459, 30);
             this.OSTextBox.TabIndex = 10;
@@ -437,7 +496,7 @@
             // PriceLabel
             // 
             this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Location = new System.Drawing.Point(754, 360);
+            this.PriceLabel.Location = new System.Drawing.Point(788, 374);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(67, 25);
             this.PriceLabel.TabIndex = 9;
@@ -446,7 +505,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(650, 394);
+            this.label2.Location = new System.Drawing.Point(684, 408);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 25);
             this.label2.TabIndex = 9;
@@ -455,7 +514,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(754, 472);
+            this.label3.Location = new System.Drawing.Point(788, 473);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 25);
             this.label3.TabIndex = 9;
@@ -463,8 +522,9 @@
             // 
             // CostTextBox
             // 
+            this.CostTextBox.BackColor = System.Drawing.Color.White;
             this.CostTextBox.Enabled = false;
-            this.CostTextBox.Location = new System.Drawing.Point(827, 357);
+            this.CostTextBox.Location = new System.Drawing.Point(861, 371);
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.Size = new System.Drawing.Size(168, 30);
             this.CostTextBox.TabIndex = 10;
@@ -472,8 +532,9 @@
             // 
             // SalesTaxTextBox
             // 
+            this.SalesTaxTextBox.BackColor = System.Drawing.Color.White;
             this.SalesTaxTextBox.Enabled = false;
-            this.SalesTaxTextBox.Location = new System.Drawing.Point(827, 396);
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(861, 410);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
             this.SalesTaxTextBox.Size = new System.Drawing.Size(168, 30);
             this.SalesTaxTextBox.TabIndex = 10;
@@ -481,8 +542,9 @@
             // 
             // TotalTextBox
             // 
+            this.TotalTextBox.BackColor = System.Drawing.Color.White;
             this.TotalTextBox.Enabled = false;
-            this.TotalTextBox.Location = new System.Drawing.Point(837, 469);
+            this.TotalTextBox.Location = new System.Drawing.Point(861, 468);
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.Size = new System.Drawing.Size(168, 30);
             this.TotalTextBox.TabIndex = 10;
@@ -504,6 +566,15 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape10,
+            this.lineShape9,
+            this.lineShape8,
+            this.lineShape7,
+            this.lineShape6,
+            this.lineShape5,
+            this.lineShape4,
+            this.lineShape3,
+            this.lineShape2,
             this.lineShape1});
             this.shapeContainer1.Size = new System.Drawing.Size(1082, 593);
             this.shapeContainer1.TabIndex = 12;
@@ -511,12 +582,176 @@
             // 
             // lineShape1
             // 
+            this.lineShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.lineShape1.BorderWidth = 3;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 671;
-            this.lineShape1.X2 = 1018;
-            this.lineShape1.Y1 = 452;
+            this.lineShape1.X1 = 685;
+            this.lineShape1.X2 = 1056;
+            this.lineShape1.Y1 = 451;
             this.lineShape1.Y2 = 452;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.11396F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.88603F));
+            this.tableLayoutPanel1.Controls.Add(this.LCDSizeTextBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.LCDSizeLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.MemoryLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.GBUBrandLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.CPUTypeLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.CPUnumberLabel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.CPUspeedLabel, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.HDDLabel, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.OSTextBox, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.GPUTypeLabel, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.WebCamTextBox, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.WebCamLabel, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.GPUTypeTextBox, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.OSLabel, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.HDDTextBox, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.MemoryTextBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CPUSeedTextBox, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.CPUBrandTextBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.CPUNumberTextBox, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.CPUTypeTextBox, 1, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 216);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 10;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(606, 342);
+            this.tableLayoutPanel1.TabIndex = 13;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape2.BorderWidth = 3;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 15;
+            this.lineShape2.X2 = 645;
+            this.lineShape2.Y1 = 76;
+            this.lineShape2.Y2 = 76;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape3.BorderWidth = 3;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 14;
+            this.lineShape3.X2 = 647;
+            this.lineShape3.Y1 = 572;
+            this.lineShape3.Y2 = 572;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape4.BorderWidth = 3;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 644;
+            this.lineShape4.X2 = 644;
+            this.lineShape4.Y1 = 571;
+            this.lineShape4.Y2 = 73;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape5.BorderWidth = 3;
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.X1 = 11;
+            this.lineShape5.X2 = 11;
+            this.lineShape5.Y1 = 572;
+            this.lineShape5.Y2 = 74;
+            // 
+            // lineShape6
+            // 
+            this.lineShape6.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape6.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape6.BorderWidth = 3;
+            this.lineShape6.Name = "lineShape6";
+            this.lineShape6.X1 = 669;
+            this.lineShape6.X2 = 669;
+            this.lineShape6.Y1 = 509;
+            this.lineShape6.Y2 = 352;
+            // 
+            // lineShape7
+            // 
+            this.lineShape7.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape7.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape7.BorderWidth = 3;
+            this.lineShape7.Name = "lineShape7";
+            this.lineShape7.X1 = 1070;
+            this.lineShape7.X2 = 1069;
+            this.lineShape7.Y1 = 511;
+            this.lineShape7.Y2 = 353;
+            // 
+            // lineShape8
+            // 
+            this.lineShape8.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape8.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape8.BorderWidth = 3;
+            this.lineShape8.Name = "lineShape8";
+            this.lineShape8.X1 = 672;
+            this.lineShape8.X2 = 1074;
+            this.lineShape8.Y1 = 352;
+            this.lineShape8.Y2 = 352;
+            // 
+            // lineShape9
+            // 
+            this.lineShape9.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape9.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape9.BorderWidth = 3;
+            this.lineShape9.Name = "lineShape9";
+            this.lineShape9.X1 = 668;
+            this.lineShape9.X2 = 1070;
+            this.lineShape9.Y1 = 511;
+            this.lineShape9.Y2 = 511;
+            // 
+            // ProductinfoLabel
+            // 
+            this.ProductinfoLabel.AutoSize = true;
+            this.ProductinfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductinfoLabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ProductinfoLabel.Location = new System.Drawing.Point(30, 64);
+            this.ProductinfoLabel.Name = "ProductinfoLabel";
+            this.ProductinfoLabel.Size = new System.Drawing.Size(216, 26);
+            this.ProductinfoLabel.TabIndex = 14;
+            this.ProductinfoLabel.Text = "System Components";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(696, 342);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 26);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Your Prices";
+            // 
+            // lineShape10
+            // 
+            this.lineShape10.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.lineShape10.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineShape10.BorderWidth = 3;
+            this.lineShape10.Name = "lineShape10";
+            this.lineShape10.X1 = 10;
+            this.lineShape10.X2 = 643;
+            this.lineShape10.Y1 = 201;
+            this.lineShape10.Y2 = 201;
             // 
             // OrderForms
             // 
@@ -524,6 +759,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 593);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ProductinfoLabel);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TotalTextBox);
             this.Controls.Add(this.SalesTaxTextBox);
@@ -531,16 +769,6 @@
             this.Controls.Add(this.PlatformTextBox);
             this.Controls.Add(this.ConditionTextBox);
             this.Controls.Add(this.ModelTextBox);
-            this.Controls.Add(this.OSTextBox);
-            this.Controls.Add(this.WebCamTextBox);
-            this.Controls.Add(this.GPUTypeTextBox);
-            this.Controls.Add(this.HDDTextBox);
-            this.Controls.Add(this.CPUSeedTextBox);
-            this.Controls.Add(this.CPUNumberTextBox);
-            this.Controls.Add(this.CPUTypeTextBox);
-            this.Controls.Add(this.CPUBrandTextBox);
-            this.Controls.Add(this.MemoryTextBox);
-            this.Controls.Add(this.LCDSizeTextBox);
             this.Controls.Add(this.ManufactursTextBox);
             this.Controls.Add(this.PlatformLabel);
             this.Controls.Add(this.label3);
@@ -548,16 +776,6 @@
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.ModelLabel);
             this.Controls.Add(this.ConditionLabel);
-            this.Controls.Add(this.OSLabel);
-            this.Controls.Add(this.WebCamLabel);
-            this.Controls.Add(this.GPUTypeLabel);
-            this.Controls.Add(this.HDDLabel);
-            this.Controls.Add(this.CPUspeedLabel);
-            this.Controls.Add(this.CPUnumberLabel);
-            this.Controls.Add(this.CPUTypeLabel);
-            this.Controls.Add(this.GBUBrandLabel);
-            this.Controls.Add(this.MemoryLabel);
-            this.Controls.Add(this.LCDSizeLabel);
             this.Controls.Add(this.ManufacturerLabel);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
@@ -573,6 +791,8 @@
             this.OrderFormMenuStrip.ResumeLayout(false);
             this.OrderFormMenuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -630,5 +850,17 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape9;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape8;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ProductinfoLabel;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape10;
     }
 }
